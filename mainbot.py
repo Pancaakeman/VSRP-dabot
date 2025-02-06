@@ -30,6 +30,7 @@ async def load():
         if filename.endswith('.py'):  # Looks for .py files
             await bot.load_extension(f'cogs.{filename[:-3]}')  # removes the .py from found files so cogs can load correctly
 
+
 @bot.event
 async def on_ready():
     await load()  # Loads cogs
